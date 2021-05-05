@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  calculator:
+    build: 
+      context: .
+      dockerfile: Dockerfile_${DOCKER_CAL_ENV}
+    image: calculator_${DOCKER_CAL_ENV}
+    container_name: calculator_${DOCKER_CAL_ENV}
+    tty: true
+    ports:
+      - '8080:8080'
+    volumes: 
+      - .:/usr/src/calculator
+      - /usr/src/calculator/node_modules
+
+    environment: 
+      CAL_ENV: $DOCKER_CAL_ENV
+    
