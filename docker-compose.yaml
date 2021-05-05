@@ -9,7 +9,7 @@ services:
     container_name: calculator_${DOCKER_CAL_ENV}
     tty: true
     ports:
-      - '8080:8080'
+      - '3000:3000'
     volumes: 
       - .:/usr/src/calculator
       - /usr/src/calculator/node_modules

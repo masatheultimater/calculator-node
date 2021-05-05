@@ -2,7 +2,7 @@ FROM node:14.16.1-slim
 
 WORKDIR /usr/src/calculator
 
-RUN apt update && npm install express --save
+RUN apt update && apt install -y git && npm install express body-parser --save && npm install nodemon -g
 
-EXPOSE 8080
+EXPOSE 3000
 
