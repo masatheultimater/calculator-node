@@ -13,6 +13,7 @@ services:
     volumes: 
       - .:/usr/src/calculator
       - /usr/src/calculator/node_modules
+      - ~/.ssh:/root/.ssh
 
     environment: 
       CAL_ENV: $DOCKER_CAL_ENV
